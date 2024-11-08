@@ -83,7 +83,7 @@ def index():
 def home():
     if request.method == 'POST':
         symptoms = request.form.get('symptoms')
-        print(symptoms)
+       
 
         if symptoms == "Symptoms":
             message = "Please either write symptoms or you have written misspelled symptoms"
