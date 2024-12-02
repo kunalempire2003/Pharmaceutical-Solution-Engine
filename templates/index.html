@@ -141,8 +141,8 @@
                     <h5 class="modal-title" id="diseaseModalLabel">Predicted Disease</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: #modal-body-color;"> <!-- Set modal body background color inline -->
-                    <p>{{ predicted_disease }}</p>
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);"> <!-- Set modal body background color inline -->
+                  <i> <b> <p>{{ predicted_disease }}</p></b></i>
                 </div>
             </div>
         </div>
@@ -157,8 +157,8 @@
                     <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>{{ dis_des }}</p>
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                 <i>  <b> <p>{{ dis_des }}</p></b></i>
                 </div>
             </div>
         </div>
@@ -172,10 +172,10 @@
                     <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
                     <ul>
                         {% for i in my_precautions %}
-                            <li>{{ i }}</li>
+                          <i> <b> <li>{{ i }}</li></b></i>
                         {% endfor %}
                     </ul>
                 </div>
@@ -194,10 +194,10 @@
                     <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
                     <ul>
                         {% for i in medications %}
-                            <li>{{ i }}</li>
+                          <i>  <b><li>{{ i }}</li></b></i>
                         {% endfor %}
                     </ul>
                 </div>
@@ -213,10 +213,10 @@
                     <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
                     <ul>
                         {% for i in workout %}
-                            <li>{{ i }}</li>
+                          <i>  <b><li>{{ i }}</li></b></i>
                         {% endfor %}
                     </ul>
                 </div>
@@ -232,17 +232,18 @@
                     <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
                     <ul>
                         {% for i in my_diet %}
-                            <li>{{ i }}</li>
+                            <b><li>{{ i }}</li></b>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-
+    
+   
             <script>
       const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
       const symptomsInput = document.getElementById('symptoms');
