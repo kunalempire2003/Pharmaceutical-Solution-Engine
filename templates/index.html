@@ -9,7 +9,7 @@
 
   <style>
  body {
-            background-image: url('https://slidechef.net/wp-content/uploads/2022/10/Free-Medicine-Background.jpg');
+            
              /* Makes the image cover the whole screen */
              /* Prevents repeating the image */
             /* Centers the image */
@@ -18,6 +18,7 @@
      background-position: center;
      background-size: cover;
      background-repeat: repeat-y;
+     background-color:papayawhip
 
         }
         .logo {
@@ -82,15 +83,15 @@
 
 <!-- main form of page -->
 <h1 class="mt-4 my-4 text-center text-green">Customized Pharmaceutical Solution Engine</h1>
-<div class="container my-4 mt-4" style="background-color: cadetblue;width: 40%;height: 25% ;color:mintcream; border-radius: 17px; padding: 40px;">
+<div class="container my-4 mt-4" style="background-color: #FFF8EE;width: 40%;height: 25% ;color:mintcream; border-radius: 17px; padding: 40px;">
     <form action="/predict" method="post">
         <div class="form-group">
-            <label for="symptoms"><b>Select Symptoms:</b></label>
+            <label for="symptoms"><b style="color:black">Select Symptoms:</b></label>
             <input type="text" class="form-control", id="symptoms" name="symptoms" placeholder="type systems such as itching, sleeping, aching etc">
 
         </div>
         <br>
-        <button type="button" id="startSpeechRecognition" class="btn btn-primary" style="margin-left:3px;border:1px solid white; border-radius:20px;">
+        <button type="button" id="startSpeechRecognition" class="btn btn-primary" style="margin-left:3px;border:1px solid white; border-radius:20px,background:#10B981;">
             Start Speech Recognition
         </button>
         <br>
@@ -122,12 +123,12 @@
 
     <div class="result-container" style="display: flex;justify-content: center;">
         <!-- Buttons to toggle display -->
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#diseaseModal" style="padding:4px;  margin: 5px 40px 5px 0; font-size:20px; width:140px; border-radius:500px; background:#080808;border-color: mintcream;color:mintcream;">Disease</button>
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#descriptionModal" style="padding:4px; margin: 5px 40px 5px 0; font-size:20px;width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Description</button>
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#precautionModal" style="padding:4px; margin: 5px 40px 5px 0; font-size:20px; width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Precaution</button>
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#medicationsModal" style="padding:4px; margin: 5px 40px 5px 0; font-size:20px; width:140px;border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Medications</button>
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#workoutsModal" style="padding:4px; margin: 5px 40px 5px 0; font-size:20px; width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Workouts</button>
-        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#dietsModal" style="padding:4px; margin: 5px 40px 5px 0; font-size:20px; width:140px; border-radius:500px;border-color: mintcream; background:#080808;color:mintcream;">Diets</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#diseaseModal" style="padding:4px 9px;  margin: 5px 40px 5px 0; font-size:16px; width:140px; border-radius:500px; background:#080808;border-color: mintcream;color:mintcream;">Disease</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#descriptionModal" style="padding:4px 9px; margin: 5px 40px 5px 0; font-size:16px;width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Description</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#precautionModal" style="padding:4px 9px; margin: 5px 40px 5px 0; font-size:16px; width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Precaution</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#medicationsModal" style="padding:4px 9px; margin: 5px 40px 5px 0; font-size:16px; width:140px;border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Medications</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#workoutsModal" style="padding:4px 9px; margin: 5px 40px 5px 0; font-size:16px; width:140px; border-radius:500px; background:#080808 ;border-color: mintcream;color:mintcream;">Workouts</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#dietsModal" style="padding:4px 9px; margin: 5px 40px 5px 0; font-size:16px; width:140px; border-radius:500px;border-color: mintcream; background:#080808;color:mintcream;">Diets</button>
     </div>
 </div>
 
@@ -137,11 +138,11 @@
     <div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;"> <!-- Set header background color inline -->
+                <div class="modal-header" style="background-color: papayawhip; color:black;"> <!-- Set header background color inline -->
                     <h5 class="modal-title" id="diseaseModalLabel">Predicted Disease</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);"> <!-- Set modal body background color inline -->
+                <div class="modal-body" style="background-color: #FFF8EE;"> <!-- Set modal body background color inline -->
                   <i> <b> <p>{{ predicted_disease }}</p></b></i>
                 </div>
             </div>
@@ -153,11 +154,11 @@
     <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;">
+                <div class="modal-header" style="background-color: papayawhip; color:black;">
                     <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                <div class="modal-body" style="background-color: #FFF8EE;">
                  <i>  <b> <p>{{ dis_des }}</p></b></i>
                 </div>
             </div>
@@ -168,11 +169,11 @@
     <div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;">
+                <div class="modal-header" style="background-color: papayawhip; color:black;">
                     <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                <div class="modal-body" style="background-color: #FFF8EE;">
                     <ul>
                         {% for i in my_precautions %}
                           <i> <b> <li>{{ i }}</li></b></i>
@@ -190,11 +191,11 @@
     <div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;">
+                <div class="modal-header" style="background-color: papayawhip; color:black;">
                     <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                <div class="modal-body" style="background-color: #FFF8EE;">
                     <ul>
                         {% for i in medications %}
                           <i>  <b><li>{{ i }}</li></b></i>
@@ -209,11 +210,11 @@
     <div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel" aria-hidden="true">
         <div class="modal-dialog" >
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;">
+                <div class="modal-header" style="background-color: papayawhip; color:black;">
                     <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                <div class="modal-body" style="background-color: #FFF8EE;">
                     <ul>
                         {% for i in workout %}
                           <i>  <b><li>{{ i }}</li></b></i>
@@ -228,11 +229,11 @@
     <div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #020606; color:white;">
+                <div class="modal-header" style="background-color: papayawhip; color:black;">
                     <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="background-color: rgb(239, 239, 117);">
+                <div class="modal-body" style="background-color:#FFF8EE;">
                     <ul>
                         {% for i in my_diet %}
                             <b><li>{{ i }}</li></b>
